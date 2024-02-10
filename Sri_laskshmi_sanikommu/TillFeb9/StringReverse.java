@@ -43,6 +43,21 @@ public class StringReverse {
 
         System.out.println("First Name: "+firstname);
         System.out.println("Last Name: "+lastname);
+
+        System.out.println("Enter a Password: ");
+        String password = input.next();
+
+        if(password.length() >= 12){
+            System.out.println("Strong Password");
+        }
+        if(password.length() >= 8 ){
+            System.out.println("Moderate Password");
+        }
+        else{
+            System.out.println("Password is too week");
+        }
+        
+        input.close();
     }
 
 }
