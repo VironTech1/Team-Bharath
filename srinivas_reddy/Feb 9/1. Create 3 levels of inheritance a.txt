@@ -1,0 +1,61 @@
+1. Create 3 levels of inheritance and call the methods.
+
+A. class Tv{
+    public void start(){
+        System.out.println("On");
+    }
+}
+class Tvremote extends Tv{
+    public void channel(){
+        System.out.println("Changed");
+    }
+}
+class Acremote extends Tvremote{
+    public void Temperature(){
+        System.out.println("Room");
+    }
+}
+public class Inheritance{
+public static void main(String []args){
+    Acremote t = new Acremote();
+    t.start();
+    t.channel();
+    t.Temperature();
+}
+}
+
+
+2. Create inheritance and perform overriding.
+
+A. class Vehicle {
+    public void start() {
+        System.out.println("Vehicle is starting.");
+    }
+}
+class Car extends Vehicle {
+    public void start() {
+        System.out.println("Car is starting.");
+    }
+    public void drive() {
+        System.out.println("Car is driving.");
+    }
+}
+class Motorcycle extends Vehicle {
+    public void start() {
+        System.out.println("Motorcycle is starting.");
+    }
+    public void ride() {
+        System.out.println("Motorcycle is riding.");
+    }
+}
+public class VehicleTest {
+    public static void main(String[] args) {
+        Vehicle myCar = new Car();
+        Motorcycle myMotorcycle = new Motorcycle();
+        myCar.start();  
+        myMotorcycle.start();  
+        myMotorcycle.ride();  
+    }
+}
+
+
