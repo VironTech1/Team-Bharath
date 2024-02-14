@@ -19,6 +19,7 @@ public class Main {
         StuCollection.add(stu4);
         StuCollection.add(stu3);
         StuCollection.add(stu2);
+        
 
         System.out.println("Student details in the collection:");
         System.out.println("-----------------------------");
