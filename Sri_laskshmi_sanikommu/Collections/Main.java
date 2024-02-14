@@ -48,10 +48,43 @@ public class Main {
         else{
             System.out.println("Student Not Found!!!");
         }
+
+        System.out.print("Enter the Student ID to delete: ");
+        int deleteId = input.nextInt();
+
+        Student delete = deleteStudentById(StuCollection, deleteId);
+        if (delete != null) {
+            System.out.println("Student found And Deleting");
+            StuCollection.remove(delete); 
+        } else {
+            System.out.println("Student Not Found!!!");
+        }
+        
+        System.out.println("Student details After Deletion:");
+        System.out.println("-----------------------------");
+        for (Student student : StuCollection) {
+            System.out.println("Student ID: " + student.StuId);
+            System.out.println("Student Name: " + student.StuName);
+            System.out.println("Age: " + student.Age);
+            System.out.println("Phone: " + student.Phone);
+            System.out.println("-----------------------------");
+        }
+
+
+        input.close();
         
     }
 
     private static Student searchStudentById(List<Student> stuCollection, int id) {
+        for (Student student : stuCollection) {
+            if (student.StuId == id) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+    private static Student deleteStudentById(List<Student> stuCollection, int id) {
         for (Student student : stuCollection) {
             if (student.StuId == id) {
                 return student;
