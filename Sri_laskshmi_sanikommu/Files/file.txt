@@ -1,0 +1,1 @@
+Hi this a file created for working eith files in java. We can read write count and do many tasks using this.

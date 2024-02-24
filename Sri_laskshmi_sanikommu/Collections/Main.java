@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        List<Student> StuCollection = new ArrayList<>();
+        ArrayList<Student> StuCollection = new ArrayList<>();
 
         Student stu1 = new Student(11801, "Lakshmi Reddy", 23, 905902107);
         Student stu2 = new Student(11802, "Velugonda", 25, 905902334);
@@ -69,9 +69,6 @@ public class Main {
             System.out.println("Phone: " + student.Phone);
             System.out.println("-----------------------------");
         }
-
-
-        input.close();
         
     }
 
